@@ -1,6 +1,5 @@
 const invert = require('../lib/invert-transformer');
 const grayscale = require('../lib/grayscale-transformer');
-const sepia = require('../lib/sepia-transformer.js');
 
 describe('transformers', () => {
 
@@ -35,17 +34,4 @@ describe('transformers', () => {
     });
   });
 
-  it('sepia', () => {
-    const transformed = sepia({
-      r: 34,
-      g: 100,
-      b: 205
-    });
-
-    expect(transformed).toEqual({
-      r: 129.007,
-      g: 114.906,
-      b: 89.50300000000001
-    });
-  });
 });
